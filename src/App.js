@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter,
+  Routes, // instead of "Switch"
+  Route,
+} from "react-router-dom";
+import Inicio from './components/Inicio/Inicio';
+import RealizarPruebas from './components/RealizarPruebas/RealizarPruebas';
+import AgregarPreguntas from './components/AgregarPreguntas/AgregarPreguntas';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+        {/* Ruta para la página de inicio */}
+        <Route exact path="/" Component={Inicio} />
+
+        {/* Ruta para la página de "Realizar Pruebas" */}
+        <Route path="/realizar-pruebas" Component={RealizarPruebas} />
+
+        {/* Ruta para la página de "Agregar Preguntas" */}
+        <Route path="/agregar-preguntas" Component={AgregarPreguntas} />
+    </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

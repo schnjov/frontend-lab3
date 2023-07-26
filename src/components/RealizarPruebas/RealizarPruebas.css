@@ -1,0 +1,21 @@
+/* RealizarPruebas.css */
+
+.resultado-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pregunta-card {
+    margin-top: 10px;
+  }
+  
+  .respuesta-correcta {
+    background-color: green;
+  }
+  
+  .respuesta-incorrecta {
+    background-color: red;
+  }
+  
